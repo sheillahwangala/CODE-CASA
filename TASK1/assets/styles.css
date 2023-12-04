@@ -40,7 +40,8 @@ html::-webkit-scrollbar-thumb{
 }
 
 section{
-    padding:5rem 9%;
+    padding:5rem 5%;
+    justify-content: space-evenly;
 }
 
 .heading{
@@ -137,35 +138,36 @@ section{
     color: #FFF;
     cursor: pointer;
 }
-
-.header .header-1 .icons div:hover,
-.header .header-1 .icons a:hover{
-    color:var(--green);
-}
-
 #search-btn{
     display: none;
 }
-
+.header .header-2{
+    display: flex;
+    flex-direction: column;
+    background-color: #F47629;
+}
+.header .header-2 .logo-2{
+    max-width: 30%;
+    margin-bottom: -2.3%;
+    margin-left: 2%;
+}
 #myTopnav {
     overflow: hidden;
     background-color: #F47629;
-    justify-content: flex-end;
   }
   
  #myTopnav a {
     width: 70%;
-    /* float: left; */
-    /* display: block; */
-    color: #f2f2f2;
-    border-radius: 20%;
-    /* padding: -10px; */
     text-align: center;
-    /* padding: 1.2rem; */
-    /* padding: 14px 16px; */
+    color: #f2f2f2;
+    text-align: center;
+    padding: 2%;
+    /* display: inline-block; */
+    /* margin-top: 40%; */
+    /* margin-bottom: 50%; */
     text-decoration: none;
     font-size: 17px;
-    justify-content: flex-end;
+    /* justify-content: space-around; */
   }
   
  #myTopnav a:hover {
@@ -181,35 +183,6 @@ section{
  #myTopnav .icon {
     display: none;
   }
-  
-
-.header .header-2{
-    background-color: #F47629;
-    padding: 0;
-
-}
-.header .header-2 .navbar{
-  display: flex; 
-  flex-direction: row;
-   
-}
-
-/* .header .header-2 .navbar .menu a{
-    text-align: left;
-    display: flex;
-} */
-
-/* .header .header-2 .navbar a{
-    color:#fff;
-    display: inline-block;
-    padding:1.2rem;
-    font-size: 1.7rem;
-}
-
-.header .header-2 .navbar a:hover{
-    background:var(--dark-color);
-} */
-
 .header .header-2.active{
     position:fixed;
     top:0; left:0; right:0;
@@ -325,44 +298,42 @@ section{
 }
 
 .home{
-    background: url(https://raw.githubusercontent.com/KordePriyanka/Books4MU-Book-Store-Website-/main/image/banner-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: #EBEBEB;
 }
 
 .home .row{
     display:flex;
     align-items: center;
     flex-wrap: wrap;
-    gap:1.5rem;
 }
-
-.home .row .content{
-    flex:1 1 42rem;
+#slogan{
+    width: 30%;
+    padding-right: 1%;
 }
-
-.home .row .books-slider{
-    flex:1 1 42rem;
+.home .row .product-slider{
     text-align: center;
     margin-top: 2rem;
+    width: 67%;
 }
 
-.home .row .books-slider a img{
-    height: 25rem;
+.home .row .product-slider a img{
+    height: 30rem;
 }
 
-.home .row .books-slider a:hover img{
+.home .row .product-slider a:hover img{
     transform: scale(.9);
 }
 
-.home .row .books-slider .stand{
+.home .row .product-slider .stand{
     width:100%;
-    margin-top: -2rem;
+    margin-top: -3rem;
 }
 
 .home .row .content h3{
     color:var(--black);
-    font-size: 4.5rem;
+    font-size: 3.5rem;
 }
 
 .home .row .content p{
@@ -400,6 +371,37 @@ section{
     font-size: 1.4rem;
     color:var(--light-color);
 }
+.about-section{
+    display: flex;
+    justify-content: space-evenly;
+}
+.about-card {
+    width: 30%;
+    box-shadow: 0 4px 8px 0 #5AC1D3;
+    transition: 0.3s;
+    align-items: center;
+  }
+  .about-card i{
+    font-size: 100px;
+    color: #F47629;
+    margin-left: 30%;
+  }
+  .about-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .about-container{
+    padding: 2px 16px;
+    text-align: center;
+  }
+  .about-container h3{
+    color:var(--black);
+    font-size: 3.5rem;
+  }
+  .about-container p{
+    color:var(--black);
+    font-size: 1.5rem;
+    text-transform: none;
+  }
 
 .featured .featured-slider .box{
     margin:2rem 0;
@@ -407,11 +409,12 @@ section{
     overflow: hidden;
     border:var(--border);
     text-align: center;
+    box-shadow: 0 4px 8px 0 #5AC1D3;
 }
 
-.featured .featured-slider .box:hover{
+/* .featured .featured-slider .box:hover{
     border:var(--border-hover);
-}
+} */
 
 .featured .featured-slider .box .image{
     padding:1rem;
@@ -419,40 +422,41 @@ section{
 }
 
 .featured .featured-slider .box:hover .image{
-    transform: translateY(6rem);
+    /* transform: translateY(6rem); */
 }
 
 .featured .featured-slider .box .image img{
     height: 25rem;
+    /* border-radius: 50%; */
 }
 
-.featured .featured-slider .box .icons{
+/* .featured .featured-slider .box .icons{
     border-bottom: var(--border-hover);
     position: absolute;
     top:0; left:0; right: 0;
     background: #fff;
     z-index: 1;
     transform: translateY(-105%);
-}
+} */
 
-.featured .featured-slider .box:hover .icons{
+/* .featured .featured-slider .box:hover .icons{
     transform: translateY(0%);
-}
+} */
 
-.featured .featured-slider .box .icons a{
+/* .featured .featured-slider .box .icons a{
     color:var(--black);
     font-size: 2.2rem;
     padding:1.3rem 1.5rem;
-}
+} */
 
-.featured .featured-slider .box .icons a:hover{
+/* .featured .featured-slider .box .icons a:hover{
     background:var(--green);
     color:#fff;
-}
+} */
 
 .featured .featured-slider .box .content{
     background:#eee;
-    padding:1.5rem;
+    padding:1%;
 }
 
 .featured .featured-slider .box .content h3{
@@ -460,18 +464,14 @@ section{
     color:var(--black);
 }
 
-.featured .featured-slider .box .content .price{
-    font-size: 2.2rem;
+.featured .featured-slider .box .content .info{
+    font-size: 1.5rem;
     color:var(--black);
     padding-top: 1rem;
 }
-
-.featured .featured-slider .box .content .price span{
-    font-size: 1.5rem;
-    color:var(--light-color);
-    text-decoration: line-through;
+.featured .featured-slider .box .content .info p{
+    text-transform: none;
 }
-
 .swiper-button-next,
 .swiper-button-prev{
     border:var(--border-hover);
@@ -493,7 +493,7 @@ section{
 }
 
 .newsletter{
-    background:url(https://raw.githubusercontent.com/KordePriyanka/Books4MU-Book-Store-Website-/main/image/letter-bg.jpg) no-repeat;
+    background:url(./images/stationery-shop.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -523,7 +523,7 @@ section{
     text-transform: none;
 }
 
-.arrivals .arrivals-slider .box{
+/* .arrivals .arrivals-slider .box{
     display: flex;
     align-items:center;
     gap:1.5rem;
@@ -545,13 +545,13 @@ section{
     color:var(--black);
 }
 
-.arrivals .arrivals-slider .box .content .price{
+.arrivals .arrivals-slider .box .content .info{
     font-size: 2.2rem;
     color:var(--black);
     padding-bottom: .5rem;
 }
 
-.arrivals .arrivals-slider .box .content .price span{
+.arrivals .arrivals-slider .box .content .info span{
     font-size: 1.5rem;
     color:var(--light-color);
     text-decoration: line-through;
@@ -598,13 +598,14 @@ section{
     color:var(--light-color);
     font-size: 1.4rem;
     line-height: 2;
-}
+} */
 
 .reviews .reviews-slider .box{
     border:var(--border);
     padding:2rem;
     text-align: center;
     margin:2rem 0;
+    height: 300px;
 }
 
 .reviews .reviews-slider .box:hover{
@@ -733,19 +734,18 @@ section{
     background:var(--black);
 }
 
-.footer .credit{
+.copyright{
     border-top: var(--border);
     margin-top: 2rem;
     padding:0 1rem;
     padding-top: 2.5rem;
     font-size: 2rem;
-    color:var(--light-color);
+    color: #fff;
     text-align: center;
+    background-color: #5AC1D3;
 }
 
-.footer .credit span{
-    color:var(--green);
-}
+
 
 .loader-container{
     position: fixed;

@@ -55,7 +55,7 @@ function fadeOut(){
   setTimeout(loader, 4000);
 }
 
-var swiper = new Swiper(".books-slider", {
+var swiper = new Swiper(".product-slider", {
   loop:true,
   centeredSlides: true,
   autoplay: {
@@ -166,4 +166,10 @@ var swiper = new Swiper(".blogs-slider", {
       slidesPerView: 3,
     },
   },
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var currentYear = new Date().getFullYear();
+  document.getElementById("copyright-year").innerText = currentYear;
 });
