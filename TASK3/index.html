@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title></title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Temperature Converter</h1>
+        </header>
+        <section>
+            <div class="section-container">
+                <div class="box-section">
+                    <p>Type a value in the <strong>Fahrenheit</strong> field to convert the value to
+                        <strong>Celsius:</strong></p>
+                    <div class="box">
+                        <p>
+                            <label>Fahrenheit</label>
+                            <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+                                oninput="fahrenheitToCelsius(this.value)" onchange="fahrenheitToCelsius(this.value)">
+                        </p>
+                        <br>
+                        <p class="results">Celsius: <span id="outputCelsius"></span> <button id="copy" onclick="copyToClipboard('outputCelsius')">Copy</button></p>
+                        <button onclick="resetValues()">Clear Data</button>
+                    </div>
+                </div>
+                <div class="box-section">
+                    <p>Type a value in the <strong>Celsius</strong> field to convert the value to
+                        <strong>Fahrenheit:</strong></p>
+                    <div class="box">
+                        <p>
+                            <label>Celsius</label>
+                            <input id="inputCelsius" type="number" placeholder="Celsius"
+                                oninput="celsiusToFahrenheit(this.value)" onchange="celsiusToFahrenheit(this.value)">
+                        </p>
+                        <br>
+                        <p class="results">Fahrenheit: <span id="outputFahrenheit"></span> <button id="copy" onclick="copyToClipboard('outputFahrenheit')">Copy</button></p>
+                        <button onclick="resetValues()">Clear Data</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>SheillahW &copy;<span id="copyright-year"></span> All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
